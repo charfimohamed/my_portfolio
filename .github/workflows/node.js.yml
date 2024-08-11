@@ -18,13 +18,13 @@ jobs:
       with:
         node-version: '16'  # Specify the Node.js version you want to use
 
-    - name: Install dependencies with legacy peer deps
-      run: npm install --legacy-peer-deps
+    - name: Install dependencies with downgraded React version
+      run: |
+        npm install react@16.14.0 react-dom@16.14.0
+        npm install
 
     - name: Build the React app
-      run: |
-        export NODE_OPTIONS=--openssl-legacy-provider
-        npm run build
+      run: npm run build
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
