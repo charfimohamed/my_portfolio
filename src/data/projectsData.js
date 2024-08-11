@@ -103,5 +103,4 @@ export async function fetchProjectsData() {
         [projectsData[i], projectsData[j]] = [projectsData[j], projectsData[i]];
     }
 
-    return projectsData;
-}
+return projectsData.filter(project => !project.projectName.toLowerCase().includes('portfolio'));}
