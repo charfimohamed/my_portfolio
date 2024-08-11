@@ -11,6 +11,7 @@ const apiEndpoint = `https://api.github.com/users/${username}/repos`;
 
 async function fetchAllRepositories() {
     try {
+        console.log("yesss");
         const response = await axios.get(apiEndpoint, {
             headers: {
                 Authorization: `token ${token}`,
