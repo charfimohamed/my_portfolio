@@ -24,7 +24,7 @@ jobs:
         npm install
 
     - name: Build the React app
-      run: npm run build
+      run: npm run build  # Removed the NODE_OPTIONS setting
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
