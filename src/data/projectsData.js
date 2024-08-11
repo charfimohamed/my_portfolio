@@ -17,6 +17,8 @@ async function fetchAllRepositories() {
                 Accept: 'application/vnd.github.v3+json'
             }
         });
+        console.log(response.data);
+
         return response.data;
     } catch (error) {
         console.error('Error fetching repositories:', error);
