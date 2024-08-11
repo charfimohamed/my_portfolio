@@ -4,7 +4,7 @@ import path from 'path';
 
 // GitHub username
 const username = 'charfimohamed';
-const token ="not going to share my token :)";
+const token ="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";
 
 // GitHub API endpoint for repositories
 const apiEndpoint = `https://api.github.com/users/${username}/repos`;
@@ -13,7 +13,7 @@ async function fetchAllRepositories() {
     try {
         const response = await axios.get(apiEndpoint, {
             headers: {
-//                Authorization: `token ${token}`,
+                Authorization: `token ${token}`,
                 Accept: 'application/vnd.github.v3+json'
             }
         });
@@ -30,7 +30,7 @@ async function fetchReadme(repoName) {
         console.log(readmeEndpoint);
         const response = await axios.get(readmeEndpoint, {
             headers: {
-//                Authorization: `token ${token}`,
+                Authorization: `token ${token}`,
                 Accept: 'application/vnd.github.v3.raw'
             }
         });
@@ -97,7 +97,6 @@ export async function fetchProjectsData() {
         const projectEntry = await createProjectEntry(index + 1, repo, demoLink);
         projectsData.push(projectEntry);
     }
-
     // Shuffle the projectsData array
     for (let i = projectsData.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
