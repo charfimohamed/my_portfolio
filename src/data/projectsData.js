@@ -4,7 +4,6 @@ import path from 'path';
 
 // GitHub username
 const username = 'charfimohamed';
-const token ="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";
 
 // GitHub API endpoint for repositories
 const apiEndpoint = `https://api.github.com/users/${username}/repos`;
@@ -14,7 +13,7 @@ async function fetchAllRepositories() {
         console.log("yesss");
         const response = await axios.get(apiEndpoint, {
             headers: {
-                Authorization: `token ${token}`,
+//                Authorization: `token ${token}`,
                 Accept: 'application/vnd.github.v3+json'
             }
         });
@@ -33,7 +32,7 @@ async function fetchReadme(repoName) {
         console.log(readmeEndpoint);
         const response = await axios.get(readmeEndpoint, {
             headers: {
-                Authorization: `token ${token}`,
+//                Authorization: `token ${token}`,
                 Accept: 'application/vnd.github.v3.raw'
             }
         });
