@@ -4,7 +4,7 @@ import path from 'path';
 
 // GitHub username
 const username = 'charfimohamed';
-const token ="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";
+const token ="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";
 
 // GitHub API endpoint for repositories
 const apiEndpoint = `https://api.github.com/users/${username}/repos`;
