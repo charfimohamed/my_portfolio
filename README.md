@@ -14,8 +14,8 @@ This project is a modified version of [Developer Portfolio](https://github.com/h
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/YOUR_GITHUB_USERNAME/developer-portfolio.git
-   cd developer-portfolio
+   git clone https://github.com/charfimohamed/my_portfolio.git
+   cd my_portfolio
    ```
 
 2. **Install Dependencies:**
