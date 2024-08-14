@@ -91,7 +91,7 @@ export async function fetchProjectsData() {
     const repositories = await fetchAllRepositories();
     const projectsData = [];
 
-    const filteredRepositories = repositories.filter(repo => !repo.name.toLowerCase().includes('portfolio'));
+    const filteredRepositories = repositories.filter(repo => !repo.name.toLowerCase().includes('github'));
 
     for (const [index, repo] of filteredRepositories.entries()) {
         const readmeContent = await fetchReadme(repo.name);
