@@ -1,6 +1,6 @@
 # My portfolio
 
-# [DEMO HERE](https://mohamedcharfi.netlify.app)
+# [DEMO HERE](https://mohamedcharfi.com)
 
 This project is a modified version of [Developer Portfolio](https://github.com/hhhrrrttt222111/developer-portfolio), enhanced to automatically fetch project data directly from your GitHub repositories. Additionally, some design tweaks have been made to improve the website's overall look and feel.
 
