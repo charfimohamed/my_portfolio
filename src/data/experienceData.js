@@ -3,22 +3,22 @@ export const experienceData = [
         id: 1,
         company: 'Dnext',
         jobtitle: 'Junior Data Analyst (Intern)',
-        startYear: 'summer 2024',
-        endYear: ''
+        startYear: 'Jul 2024',
+        endYear: 'Present'
     },
     {
         id: 2,
         company: 'EPFL',
         jobtitle: 'Teaching assistant (object oriented programming course)',
-        startYear: 'autumn 2024',
-        endYear: ''
+        startYear: 'Sep 2023',
+        endYear: 'Feb 2024'
     },
     {
         id: 3,
         company: 'ST2i',
         jobtitle: 'Junior fullstack Developer (Intern)',
-        startYear: 'summer 2023',
-        endYear: ''
+        startYear: 'Jul 2023',
+        endYear: 'Aug 2023'
     }
 
 ]
