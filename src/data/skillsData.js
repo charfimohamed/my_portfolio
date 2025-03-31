@@ -11,7 +11,8 @@
     'Matlab',
      'MySQL',
     'PostgreSQL',
-     'R'
+     'R',
+  'Microsoft Office'
 
 
 ]
