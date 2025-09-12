@@ -91,13 +91,18 @@ export async function fetchProjectsData() {
     const repositories = await fetchAllRepositories();
     const projectsData = [];
 
-    const filteredRepositories = repositories.filter(repo => !repo.name.toLowerCase().includes('github'));
+    const filteredRepositories = repositories.filter(repo => !repo.private && !repo.name.toLowerCase().includes('github'));
 
     for (const [index, repo] of filteredRepositories.entries()) {
-        const readmeContent = await fetchReadme(repo.name);
-        const demoLink = extractDemoLink(readmeContent);
-        const projectEntry = await createProjectEntry(index + 1, repo, demoLink);
-        projectsData.push(projectEntry);
+        try {
+            const readmeContent = await fetchReadme(repo.name);
+            const demoLink = extractDemoLink(readmeContent);
+            const projectEntry = await createProjectEntry(index + 1, repo, demoLink);
+            projectsData.push(projectEntry);
+        } catch (error) {
+            console.error(`Skipping repository due to error: ${repo?.name}`, error);
+            continue;
+        }
     }
     // Shuffle the projectsData array
     for (let i = projectsData.length - 1; i > 0; i--) {
